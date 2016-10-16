@@ -1,0 +1,24 @@
+public static function getArabicMonth($date) {
+        $months = [
+            "Jan" => "يناير",
+            "Feb" => "فبراير",
+            "Mar" => "مارس",
+            "Apr" => "أبريل",
+            "May" => "مايو",
+            "Jun" => "يونيو",
+            "Jul" => "يوليو",
+            "Aug" => "أغسطس",
+            "Sep" => "سبتمبر",
+            "Oct" => "أكتوبر",
+            "Nov" => "نوفمبر",
+            "Dec" => "ديسمبر"
+        ];
+
+        $day = date("d", strtotime($date));
+        $month = date("M", strtotime($date));
+        $year = date("Y", strtotime($date));
+
+        $month = $months[$month];
+
+        return $day . ' ' . $month . ' ' . $year;
+    }
